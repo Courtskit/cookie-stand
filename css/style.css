@@ -1,0 +1,14 @@
+* {
+  background-color: rgba(0, 134, 134, 0.048);
+  list-style-type: none;
+}
+
+section {
+  border: 6px solid rgb(253, 146, 146);
+  margin: auto;
+}
+
+ul {
+  display: inline-block;
+}
+

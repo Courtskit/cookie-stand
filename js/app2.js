@@ -41,47 +41,46 @@ Dubai.randomNumber();
 Paris.randomNumber();
 Lima.randomNumber();
 
-// render the hour as a header row
+// render the hour as a header row  .. id=stores
 Store.prototype.render = function () {
 
+  var parent = document.getElementById('stores');
+  var row = document.createElement('tr');
+  var header = document.createElement('th');
+  header.textContent = '';
+  row.appendChild(header);
 
-  // var parent = document.getElementById(store.nameOfStore);
-  // var array = this.randomCustomerPerHourArray();
   for (var i = 0; i < storeHours.length; i++) {
-
-
-
-    // var listItem = document.createElement('li');
-    // listItem.textContent = storeHours[i] + array[i];
-    // parent.appendChild(listItem);
+    header = document.createElement('th');
+    header.textContent = storeHours[i];
+    row.appendChild(header);
   }
-}
 
-////////////////////////
+  parent.appendChild(row);
 
-// var parentElement = document.getElementById('table');
-// var tableRow = document.createElement('tr');
-// var array = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
+};
 
+Store.prototype.renderSales = function () {
 
-// tableRow.appendChild(tableHeader){
-//   for (var i = 0; i < Array.length; i++) {
-//     tableHeader = document.createElement('th');
-//     tableHeader.textContent = array[i];
-//     tableRow.appendChild(tableHeader);
-//   }
-// }
+  var parent = document.getElementById('stores');
+  var row = document.createElement('tr');
+  var data = document.createElement('td');
+  data.textContent = this.storeName;
+  row.appendChild(data);
+  for (var i = 0; i < storeHours.length; i++) {
+    data = document.createElement('th');
+    data.textContent = this.randomNumber()[i];
+    row.appendChild(data);
+  }
 
-// parentElement.appendChild(tableRow);
+  parent.appendChild(row);
 
+};
 
-// functions render information
+Store.prototype.render();
+Seattle.renderSales();
+Tokyo.renderSales();
+Dubai.renderSales();
+Paris.renderSales();
+Lima.renderSales();
 
-
-
-
-// Seattle.render();
-// Tokyo.render();
-// Dubai.render();
-// Paris.render();
-// Lima.render();

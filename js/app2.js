@@ -43,7 +43,6 @@ Lima.randomNumber();
 
 // render the hour as a header row  .. id=stores
 Store.prototype.render = function () {
-
   var parent = document.getElementById('stores');
   var row = document.createElement('tr');
   var header = document.createElement('th');
@@ -55,26 +54,22 @@ Store.prototype.render = function () {
     header.textContent = storeHours[i];
     row.appendChild(header);
   }
-
   parent.appendChild(row);
-
 };
 
 Store.prototype.renderSales = function () {
-
   var parent = document.getElementById('stores');
   var row = document.createElement('tr');
   var data = document.createElement('td');
   data.textContent = this.storeName;
   row.appendChild(data);
+
   for (var i = 0; i < storeHours.length; i++) {
     data = document.createElement('th');
     data.textContent = this.randomNumber()[i];
     row.appendChild(data);
   }
-
   parent.appendChild(row);
-
 };
 
 Store.prototype.render();

@@ -1,12 +1,31 @@
 * {
-  background-color: rgba(0, 134, 134, 0.048);
+  background-color: #0086860c;
   list-style-type: none;
 }
 
-section {
-  border: 6px solid rgb(253, 146, 146);
+table, th, td {
+  border-bottom: 5px solid rgba(253, 146, 146, 0.281);
+}
+
+section table {
+  border: 8px solid rgb(253, 146, 146);
   width: 80%;
   margin: auto;
+  padding: 10px;
+}
+tr {
+  color: rgb(31, 128, 238);
+  font-size: 115%;
+  background: linear-gradient(to top, rgba(253, 146, 146, 0.253), rgba(0, 255, 255, 0.158) 100%);
+}
+
+td {
+  color: rgb(31, 128, 238);
+  font-size: 130%;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  background: linear-gradient(to top, rgba(253, 146, 146, 0.253), rgba(0, 255, 255, 0.158) 100%);
+  border-bottom: 5px solid rgba(253, 146, 146, 0.747);
 }
 
 ul {

@@ -41,7 +41,7 @@ Store.prototype.sumOfStoreCookies = function () {
 };
 // calculates store locations hourly sums 
 var sumArray = [];
-
+var totalOfAllTotals = 0;
 function sumOfAllLocationsStoreHours() {
   for (var i = 0; i < storeHours.length; i++) {
     var sum = 0;
@@ -51,9 +51,12 @@ function sumOfAllLocationsStoreHours() {
       sum += everyLocation[j].arrayOfCookies[i];
       // console.log(everyLocation[j].arrayOfCookies[i]);
     }
+    totalOfAllTotals += sum;
     sumArray.push(sum);
   }
 };
+
+
 
 ///////////////////////////////////////////////
 
@@ -90,6 +93,7 @@ Store.prototype.renderSales = function () {
   }
 
   //ADD DATA OF SUM HERE
+
   var sumData = document.createElement('td');
   sumData.textContent = this.sumOfStoreHourCookies;
   row.appendChild(sumData);
@@ -109,7 +113,12 @@ function renderSalesHours() {
     data.textContent = sumArray[i];
     row.appendChild(data);
   }
+  ///////////////////////
+  data = document.createElement('td');
+  data.textContent = totalOfAllTotals;
+  row.appendChild(data);
   parent.appendChild(row);
+  //////////////////////
 }
 
 Store.prototype.render();

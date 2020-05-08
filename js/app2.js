@@ -123,11 +123,16 @@ function handleFormSubmit(event) {
   var maxCustomer = Number(event.target.maxCustomer.value);
   var avgCookiesSoldPerSale = Number(event.target.avgCookiesSoldPerSale.value);
 
-  var testt = new Store(nameOfStore, minCustomer, maxCustomer, avgCookiesSoldPerSale);
+  nameOfStore = new Store(nameOfStore, minCustomer, maxCustomer, avgCookiesSoldPerSale);
 
-  testt.renderSales();
+  var row = document.getElementById('stores');
+  row.removeChild(row.lastChild);
+
+  nameOfStore.renderSales();
+
+  sumOfAllLocationsStoreHours();
+  renderSalesHours();
 }
-
 form.addEventListener('submit', handleFormSubmit);
 ////////////////////////////////
 Store.prototype.render();

@@ -9,7 +9,6 @@ var Tokyo = new Store('Tokyo', 3, 24, 1.2);
 var Dubai = new Store('Dubai', 11, 38, 3.7);
 var Paris = new Store('Paris', 20, 38, 2.3);
 var Lima = new Store('Lima', 2, 16, 4.6);
-
 // constructor function for store locations
 function Store(nameOfStore, minCustomer, maxCustomer, avgCookiesSoldPerSale) {
   this.storeName = nameOfStore;
@@ -20,7 +19,6 @@ function Store(nameOfStore, minCustomer, maxCustomer, avgCookiesSoldPerSale) {
   this.sumOfStoreHourCookies = 0;
   everyLocation.push(this);
 }
-
 // gives random number for the amount of Customers
 // makes an array of random numbers for each store hour
 // multiply each index of array with average cookie sale per hour
@@ -31,7 +29,6 @@ Store.prototype.randomNumber = function () {
     this.arrayOfCookies.push(Math.ceil(randomNumber * this.avgCookiesSoldPerSale));
   }
 };
-//   /////////////////////////////////////////////
 //   //calculates sum of cookies for the day
 Store.prototype.sumOfStoreCookies = function () {
   this.randomNumber();
@@ -55,11 +52,6 @@ function sumOfAllLocationsStoreHours() {
     sumArray.push(sum);
   }
 };
-
-
-
-///////////////////////////////////////////////
-
 // render the hours as a header row  .. id=stores
 Store.prototype.render = function () {
   var parent = document.getElementById('stores');
@@ -120,7 +112,24 @@ function renderSalesHours() {
   parent.appendChild(row);
   //////////////////////
 }
+//////////FORMS//////////////////
+var form = document.getElementById('form');
 
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  var nameOfStore = event.target.nameOfStore.value;
+  var minCustomer = Number(event.target.minCustomer.value);
+  var maxCustomer = Number(event.target.maxCustomer.value);
+  var avgCookiesSoldPerSale = Number(event.target.avgCookiesSoldPerSale.value);
+
+  var testt = new Store(nameOfStore, minCustomer, maxCustomer, avgCookiesSoldPerSale);
+
+  testt.renderSales();
+}
+
+form.addEventListener('submit', handleFormSubmit);
+////////////////////////////////
 Store.prototype.render();
 Seattle.renderSales();
 Tokyo.renderSales();

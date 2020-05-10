@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
 
-* {
+header {
   font-family: 'Nanum Gothic', sans-serif;
 }
 body {
@@ -10,7 +10,6 @@ header {
 display: block;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-family: 'Nanum Gothic', sans-serif;
-  /* border: 4px solid rgb(113, 61, 209); */
 }
 header section {
   background: white;
@@ -19,10 +18,8 @@ header section {
   border-radius: 2px;
   height: 90px;
   text-align: center;
-  /* border: 2px solid rgb(0, 255, 0); */
 }
 .fishLogo {
-  /* border: 2px solid rgb(0, 162, 255); */
   width: 28%;
   max-width: 220px;
   float: left;
@@ -31,7 +28,6 @@ header section {
 #salmonCookiesHeader {
   padding-top: 25px;
   display: inline-block;
-  /* border: 4px solid rgb(255, 0, 234); */
 }
 h1 {
   display: inline;
@@ -44,7 +40,6 @@ h1 {
 nav{
   display: block;
   margin-top:10px;
-  /* border: 2px solid rgb(0, 217, 255); */
 }
 nav li{
   background-color: rgba(253, 146, 146, 0.678);
@@ -57,7 +52,6 @@ nav li{
   text-shadow: 1px 1px 1px rgb(255, 255, 255);
   box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.096);
   margin-left: 4px;
-  /* border: 2px solid rgb(255, 251, 0); */
 }
 nav li a {
   text-decoration: none;
@@ -77,8 +71,7 @@ nav li:hover {
   letter-spacing: 1.8px;
   font-weight: bolder;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
-  margin-bottom: 6px;
-  /* border: 2px solid red; */  
+  margin-bottom: 6px; 
 }
 .fishinpromo {
   opacity: 40%;
@@ -109,7 +102,6 @@ main section {
   font-size: 18px;
   line-height: 18px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.233);
-
 }
 #orderOnline {
   margin-top: 8px;
@@ -120,7 +112,7 @@ main section {
   background: rgba(18, 118, 131, 0.692);
   padding: 7px;
   color: white;
-  /* border: 2px solid orchid; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #orderP {
   background: white;
@@ -134,7 +126,7 @@ main section {
   width: 350px;
   min-width: 280px;
   line-height: 22px;
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #socialPics {
   display: flex;
@@ -146,7 +138,6 @@ main section {
   width: 105px;
   height: 105px;
   margin-left: -4px;
-  /* margin: auto; */
 }
 footer {
   display: flex;
@@ -169,5 +160,9 @@ footer img {
   width: 80%;
   padding: 10px;
   line-height: 28px;
+  text-align: center;
+}
+
+.mainText {
   text-align: center;
 }

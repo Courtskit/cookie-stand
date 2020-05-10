@@ -18,10 +18,8 @@ header section {
   border-radius: 2px;
   height: 90px;
   text-align: center;
-  /* border: 2px solid rgb(0, 255, 0); */
 }
 .fishLogo {
-  /* border: 2px solid rgb(0, 162, 255); */
   width: 28%;
   max-width: 220px;
   float: left;
@@ -30,7 +28,6 @@ header section {
 #salmonCookiesHeader {
   padding-top: 25px;
   display: inline-block;
-  /* border: 4px solid rgb(255, 0, 234); */
 }
 h1 {
   display: inline;
@@ -43,7 +40,6 @@ h1 {
 nav{
   display: block;
   margin-top:10px;
-  /* border: 2px solid rgb(0, 217, 255); */
 }
 nav li{
   background-color: rgba(253, 146, 146, 0.678);
@@ -56,7 +52,6 @@ nav li{
   text-shadow: 1px 1px 1px rgb(255, 255, 255);
   box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.096);
   margin-left: 4px;
-  /* border: 2px solid rgb(255, 251, 0); */
 }
 nav li a {
   text-decoration: none;
@@ -76,7 +71,6 @@ nav li:hover {
   letter-spacing: 1.8px;
   font-weight: bolder;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
-  /* border: 2px solid red;   */
 }
 .fishinpromo {
   opacity: 40%;
@@ -125,6 +119,7 @@ td {
   font-size: 18px;
   line-height: 18px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.233);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 footer {
   display: flex;
